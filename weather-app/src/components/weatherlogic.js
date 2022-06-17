@@ -1,5 +1,6 @@
 import React from "react";
 import Weather from "./weather-info";
+import Info from './info';
 
 const API = 'e72b77c5176fe83a0d977a2e1be1a5a7';
 
@@ -15,6 +16,7 @@ class Weatherform extends React.Component {
         feels_like: undefined,
         wind: undefined,
         country: undefined,
+        error: undefined,
     }
 
     getWeather = async (event) => {
@@ -59,28 +61,54 @@ class Weatherform extends React.Component {
                 wind: dataWeather.wind.speed,
                 country: dataWeather.sys.country,
                 city: dataWeather.name,
+                error:undefined
             });
-        }
+        } else {
+            this.setState({
+                temp: undefined,
+                humidity: undefined,
+                sunset: undefined,
+                sunrise: undefined,
+                pressure: undefined,
+                feels_like: undefined,
+                wind: undefined,
+                country: undefined,
+                city: undefined,
+                error:"Введите название города",
+            })
+        }    
     }
     
     render() {
         return (
-            <div>
-                <form onSubmit={this.getWeather}>
-                    <input type="text" name="city" placeholder="Город"/>
-                <button> Узнать погоду</button>
-                </form>
-                <Weather 
-                temp={this.state.temp}
-                humidity={this.state.humidity}
-                sunset={this.state.sunset}
-                sunrise={this.state.sunrise}
-                pressure={this.state.pressure}
-                feels_like={this.state.feels_like}
-                wind={this.state.wind}
-                country={this.state.country}
-                city={this.state.city}            
-                />
+            <div className="wrapper">
+                <div className="main">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-4 info">
+                                <Info />
+                            <div className="col-8 submit">
+                                <form onSubmit={this.getWeather}>
+                                    <input type="text" name="city" placeholder="Город"/>
+                                    <button> Узнать погоду</button>
+                                </form>
+                                <Weather 
+                                temp={this.state.temp}
+                                humidity={this.state.humidity}
+                                sunset={this.state.sunset}
+                                sunrise={this.state.sunrise}
+                                pressure={this.state.pressure}
+                                feels_like={this.state.feels_like}
+                                wind={this.state.wind}
+                                country={this.state.country}
+                                city={this.state.city}
+                                error={this.state.error}            
+                                />
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
