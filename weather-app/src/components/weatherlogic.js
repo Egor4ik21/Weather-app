@@ -4,7 +4,7 @@ import Info from './info';
 
 const API = 'e72b77c5176fe83a0d977a2e1be1a5a7';
 
-class Weatherform extends React.Component {
+class Weatherblock extends React.Component {
     
     state = {
         city: undefined,
@@ -114,4 +114,4 @@ class Weatherform extends React.Component {
     }
 }
 
-export default Weatherform;
+export default Weatherblock;
