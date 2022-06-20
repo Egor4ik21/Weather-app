@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route, Link } from 'react-router-dom';
-import { Timepage } from './pages/Timepage.js';
-import { Weatherpage } from './pages/Weatherpage.js';
-import { Homepage } from './pages/Homepage.js';
+import { Timepage } from './pages/Timepage';
+import { WeatherPage } from './pages/Weatherpage';
+import { Homepage } from './pages/Homepage';
 
 class App extends React.Component {
 
@@ -16,7 +16,7 @@ class App extends React.Component {
                 </header>
                 <Routes>
                     <Route path="/" element={<Homepage />} />
-                    <Route path="/weather" element={<Weatherpage />} />
+                    <Route path="/weather" element={<WeatherPage />} />
                     <Route path="/time" element={<Timepage />} />
                 </Routes>
             </div>

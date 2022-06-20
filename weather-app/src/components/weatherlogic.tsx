@@ -1,8 +1,9 @@
 import React from "react";
 import Weather from "./weather-info";
 import Info from './info';
+import api_url from "./api/apiweather";
 
-const API = 'e72b77c5176fe83a0d977a2e1be1a5a7';
+let city
 
 class Weatherblock extends React.Component {
     
@@ -21,13 +22,9 @@ class Weatherblock extends React.Component {
 
     getWeather = async (event) => {
         event.preventDefault();
-        let city = event.target.elements.city.value;
-        const api_url = await 
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API}&units=metric`);
+        city = event.target.elements.city.value;
         const dataWeather = await api_url.json();
         console.log(dataWeather);
-        
-        if(city) {
 
         function timeConverter(UNIX_timestamp){
             let a = new Date(UNIX_timestamp * 1000);
@@ -51,6 +48,8 @@ class Weatherblock extends React.Component {
             let feels_like = dataWeather.main.feels_like;
             let newFeels_like = Math.floor(feels_like);
 
+        
+        if(city) {
             this.setState({
                 temp: newTemp,
                 humidity: dataWeather.main.humidity,
@@ -78,7 +77,7 @@ class Weatherblock extends React.Component {
             })
         }    
     }
-    
+
     render() {
         return (
             <div className="wrapper">
@@ -115,3 +114,4 @@ class Weatherblock extends React.Component {
 }
 
 export default Weatherblock;
+export {city};

@@ -1,7 +1,7 @@
 import React from 'react'
 import Weatherblock from '../components/weatherlogic';
 
-const Weatherpage = () => {
+const WeatherPage = () => {
     return (
         <div>
             <h1>Weather Page</h1>
@@ -11,4 +11,4 @@ const Weatherpage = () => {
         </div>
     )
 }
-export {Weatherpage};
+export {WeatherPage};
