@@ -4,6 +4,7 @@ import Info from './info';
 import api_url from "./api/apiweather";
 
 let city
+/* const API = 'e72b77c5176fe83a0d977a2e1be1a5a7'; */
 
 class Weatherblock extends React.Component {
     
@@ -19,12 +20,13 @@ class Weatherblock extends React.Component {
         country: undefined,
         error: undefined,
     }
+    
 
     getWeather = async (event) => {
         event.preventDefault();
-        city = event.target.elements.city.value;
-        const dataWeather = await api_url.json();
-        console.log(dataWeather);
+        city = (document.querySelector('.cityValue') as HTMLInputElement).value
+        const dataWeather =  await api_url.json();
+        console.log(dataWeather); 
 
         function timeConverter(UNIX_timestamp){
             let a = new Date(UNIX_timestamp * 1000);
@@ -75,7 +77,7 @@ class Weatherblock extends React.Component {
                 city: undefined,
                 error:"Введите название города",
             })
-        }    
+        }  
     }
 
     render() {
@@ -87,9 +89,9 @@ class Weatherblock extends React.Component {
                             <div className="col-4 info">
                                 <Info />
                             <div className="col-8 submit">
-                                <form onSubmit={this.getWeather}>
-                                    <input type="text" name="city" placeholder="Город"/>
-                                    <button> Узнать погоду</button>
+                                <form>
+                                    <input className="cityValue" type="text" name="city" placeholder="Город"/>
+                                    <button onClick={this.getWeather}>Узнать погоду</button>
                                 </form>
                                 <Weather 
                                 temp={this.state.temp}
