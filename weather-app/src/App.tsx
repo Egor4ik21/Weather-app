@@ -3,6 +3,8 @@ import { Routes, Route, Link } from 'react-router-dom';
 import { Timepage } from './pages/Timepage';
 import { WeatherPage } from './pages/Weatherpage';
 import { Homepage } from './pages/Homepage';
+import './index.css';
+import './App.css';
 
 class App extends React.Component {
 

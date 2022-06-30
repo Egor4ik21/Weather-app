@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import './stylepage/homepage.css';
 
 const Homepage = () => {
     return (
-        <div>
-            <h1>Home Page</h1>
+        <div className='homepage'>
+            <span className="text-home">
+                Прогноз погоды и время в вашем городе
+            </span>
         </div>
     )
 }

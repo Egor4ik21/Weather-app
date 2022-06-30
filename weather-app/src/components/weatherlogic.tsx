@@ -1,10 +1,7 @@
 import React from "react";
 import Weather from "./weather-info";
 import Info from './info';
-import api_url from "./api/apiweather";
-
-let city
-/* const API = 'e72b77c5176fe83a0d977a2e1be1a5a7'; */
+import getWeather from '/home/egor/Weather-app/weather-app/src/api/apiweather'
 
 class Weatherblock extends React.Component {
     
@@ -24,8 +21,8 @@ class Weatherblock extends React.Component {
 
     getWeather = async (event) => {
         event.preventDefault();
-        city = (document.querySelector('.cityValue') as HTMLInputElement).value
-        const dataWeather =  await api_url.json();
+        let city = (document.querySelector('.cityValue') as HTMLInputElement).value
+        const dataWeather =  await (await getWeather()).json();
         console.log(dataWeather); 
 
         function timeConverter(UNIX_timestamp){
@@ -116,4 +113,3 @@ class Weatherblock extends React.Component {
 }
 
 export default Weatherblock;
-export {city};

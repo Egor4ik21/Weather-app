@@ -1,12 +1,14 @@
 import React from 'react'
 import Time from '../components/time';
+import './stylepage/timepage.css';
 
 const Timepage = () => {
     return (
-        <div>
-            <h1>Time Page</h1>
-            <Time />
-        </div>
+        <body className='maintime'>
+            <div>
+                <Time />
+            </div>
+        </body>
     )
 }
 export {Timepage};
