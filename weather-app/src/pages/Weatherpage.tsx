@@ -5,7 +5,7 @@ import './stylepage/weatherpage.css';
 const WeatherPage = () => {
     return (
         <div>
-            <Weatherblock/>
+            <Weatherblock />
         </div>
     )
 }

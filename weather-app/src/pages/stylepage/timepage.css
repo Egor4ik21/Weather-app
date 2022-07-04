@@ -1,3 +1,8 @@
 .maintime {
-
+display: flex;
+justify-content: center;
+margin: 17%;
+font-size: 350%;
+color: #2C2C32;
+text-shadow: 1px 1px 1px #000;
 }

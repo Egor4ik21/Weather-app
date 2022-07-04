@@ -1,5 +1,5 @@
 header {
-  background-color:#2C2C32;;
+  background-color:#2C2C32;
   padding: 2rem 0;
   text-align: center;
 }
@@ -14,5 +14,6 @@ header > a:hover {
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin: 0;
-  background-color: #7cfca7;
+  background-image: url(./image/1613686188_25-p-fon-dlya-prezentatsii-pogoda-25.png);
 }
+

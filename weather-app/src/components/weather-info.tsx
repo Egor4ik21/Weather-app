@@ -12,7 +12,8 @@ const Weather = (props) => {
             <p>Восход солнца:{props.sunrise}</p>
             <p>Заход солнца:{props.sunset}</p>
             <p>Ветер:{props.wind}м/с</p>
-            <p>Давление:{props.pressure} мм рт. ст.</p>  
+            <p>Давление:{props.pressure} мм рт. ст.</p>
+            {/* <p>Сейчас:{props.main}</p> */}
             <p>Влажность:{props.humidity}%</p>
         </div> 
     } 

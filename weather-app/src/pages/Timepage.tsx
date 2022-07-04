@@ -4,11 +4,9 @@ import './stylepage/timepage.css';
 
 const Timepage = () => {
     return (
-        <body className='maintime'>
-            <div>
-                <Time />
-            </div>
-        </body>
+        <div className='maintime'>
+            <Time />
+        </div>
     )
 }
 export {Timepage};

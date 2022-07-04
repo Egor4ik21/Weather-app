@@ -15,6 +15,7 @@ class Weatherblock extends React.Component {
         feels_like: undefined,
         wind: undefined,
         country: undefined,
+        main: undefined,
         error: undefined,
     }
     
@@ -59,6 +60,7 @@ class Weatherblock extends React.Component {
                 wind: dataWeather.wind.speed,
                 country: dataWeather.sys.country,
                 city: dataWeather.name,
+                main:dataWeather.weather[0].main,
                 error:undefined
             });
         } else {
@@ -83,14 +85,15 @@ class Weatherblock extends React.Component {
                 <div className="main">
                     <div className="container">
                         <div className="row">
-                            <div className="col-4 info">
+                            <div className="col-sm-5 info">
                                 <Info />
-                            <div className="col-8 submit">
+                            </div>
+                            <div className="col-sm-7 form">
                                 <form>
                                     <input className="cityValue" type="text" name="city" placeholder="Город"/>
                                     <button onClick={this.getWeather}>Узнать погоду</button>
                                 </form>
-                                <Weather 
+                                <Weather
                                 temp={this.state.temp}
                                 humidity={this.state.humidity}
                                 sunset={this.state.sunset}
@@ -100,9 +103,9 @@ class Weatherblock extends React.Component {
                                 wind={this.state.wind}
                                 country={this.state.country}
                                 city={this.state.city}
+                                main={this.state.main}
                                 error={this.state.error}            
                                 />
-                            </div>
                             </div>
                         </div>
                     </div>
