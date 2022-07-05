@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Egor4ik21/Weather-app/static/css/main.81195c8e.css",
+    "main.js": "/Egor4ik21/Weather-app/static/js/main.2c71a84b.js",
+    "static/js/787.d9312eb8.chunk.js": "/Egor4ik21/Weather-app/static/js/787.d9312eb8.chunk.js",
+    "static/media/1613686188_25-p-fon-dlya-prezentatsii-pogoda-25.png": "/Egor4ik21/Weather-app/static/media/1613686188_25-p-fon-dlya-prezentatsii-pogoda-25.e7882fe5e4f811bcbd54.png",
+    "static/media/scale_1200.webp": "/Egor4ik21/Weather-app/static/media/scale_1200.3db49dc728a9349ca0b6.webp",
+    "index.html": "/Egor4ik21/Weather-app/index.html",
+    "main.81195c8e.css.map": "/Egor4ik21/Weather-app/static/css/main.81195c8e.css.map",
+    "main.2c71a84b.js.map": "/Egor4ik21/Weather-app/static/js/main.2c71a84b.js.map",
+    "787.d9312eb8.chunk.js.map": "/Egor4ik21/Weather-app/static/js/787.d9312eb8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81195c8e.css",
+    "static/js/main.2c71a84b.js"
+  ]
+}
