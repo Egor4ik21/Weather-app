@@ -12,9 +12,9 @@ class App extends React.Component {
         return (
             <div>
                 <header>
-                    <Link to="/">Home</Link>
-                    <Link to="/time">Timepage</Link>
-                    <Link to="/weather">Weatherpage</Link>
+                    <Link to="/">Главная</Link>
+                    <Link to="/time">Время</Link>
+                    <Link to="/weather">Погода</Link>
                 </header>
                 <Routes>
                     <Route path="/" element={<Homepage />} />
